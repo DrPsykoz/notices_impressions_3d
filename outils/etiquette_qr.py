@@ -110,13 +110,13 @@ def render_qr(url):
     for r in range(n):
         for c in range(n):
             if m[r][c] and not in_finder(r, c):
-                g = u * 0.06
+                g = 0  # modules jointifs : plus robuste si l'impression sort pâle
                 d.rounded_rectangle((c * u + g, r * u + g, (c + 1) * u - g, (r + 1) * u - g), radius=u * 0.32, fill=0)
     for fr, fc in finders:
         x, y = fc * u, fr * u
-        d.rounded_rectangle((x, y, x + 7 * u - 1, y + 7 * u - 1), radius=u * 0.6, fill=0)
-        d.rounded_rectangle((x + u, y + u, x + 6 * u - 1, y + 6 * u - 1), radius=u * 0.4, fill=255)
-        d.rounded_rectangle((x + 2 * u, y + 2 * u, x + 5 * u - 1, y + 5 * u - 1), radius=u * 0.26, fill=0)
+        d.rounded_rectangle((x, y, x + 7 * u - 1, y + 7 * u - 1), radius=u * 0.3, fill=0)
+        d.rounded_rectangle((x + u, y + u, x + 6 * u - 1, y + 6 * u - 1), radius=u * 0.2, fill=255)
+        d.rounded_rectangle((x + 2 * u, y + 2 * u, x + 5 * u - 1, y + 5 * u - 1), radius=u * 0.13, fill=0)
     small = big.resize((n * px, n * px), Image.LANCZOS)
     return small.point(lambda p: 255 if p > 128 else 0).convert("1")
 
