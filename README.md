@@ -8,7 +8,7 @@ https://drpsykoz.github.io/notices_impressions_3d/
 - `index.html` : page d'accueil qui liste les notices
 - `assets/notice.css` : style commun à toutes les notices
 - `<figurine>/index.html` : notice web (une par dossier), avec ses photos dans `img/` et le PDF
-- `etiquettes/` : étiquettes QR code à imprimer (noir et blanc, 48 mm à 203 dpi)
-- `outils/etiquette_qr.py` : génère une étiquette, ex. `python outils/etiquette_qr.py fantome-chien "Le Fantôme et son chien"`
+- `etiquettes/` : planches de 2 étiquettes QR code à imprimer (bordereau thermique 100 x 150 mm, noir et blanc pur, 203 dpi)
+- `outils/etiquette_qr.py` : génère une planche, ex. `python outils/etiquette_qr.py fantome-chien "Le Fantôme" "et son chien" 04 "~5 min"`
 
 ⚠️ Ne jamais renommer le dépôt ni un dossier de figurine : les QR codes imprimés pointent dessus.
